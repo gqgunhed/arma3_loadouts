@@ -1,0 +1,49 @@
+comment "Exported from Arsenal by GQGalahad";
+
+comment "Remove existing items";
+removeAllWeapons this;
+removeAllItems this;
+removeAllAssignedItems this;
+removeUniform this;
+removeVest this;
+removeBackpack this;
+removeHeadgear this;
+removeGoggles this;
+
+comment "Add containers";
+this forceAddUniform "U_O_GhillieSuit";
+for "_i" from 1 to 10 do {this addItemToUniform "ACE_fieldDressing";};
+for "_i" from 1 to 5 do {this addItemToUniform "ACE_morphine";};
+this addItemToUniform "MiniGrenade";
+this addItemToUniform "30Rnd_9x21_Mag";
+for "_i" from 1 to 2 do {this addItemToUniform "5Rnd_127x108_Mag";};
+this addVest "V_PlateCarrier1_rgr";
+this addItemToVest "MineDetector";
+for "_i" from 1 to 3 do {this addItemToVest "5Rnd_127x108_Mag";};
+for "_i" from 1 to 3 do {this addItemToVest "5Rnd_127x108_APDS_Mag";};
+this addItemToVest "30Rnd_9x21_Mag";
+this addItemToVest "Chemlight_green";
+this addBackpack "B_FieldPack_ocamo";
+this addItemToBackpack "ToolKit";
+this addItemToBackpack "Titan_AT";
+this addItemToBackpack "5Rnd_127x108_Mag";
+this addItemToBackpack "16Rnd_9x21_Mag";
+this addHeadgear "H_HelmetB_camo";
+
+comment "Add weapons";
+this addWeapon "srifle_GM6_camo_F";
+this addPrimaryWeaponItem "optic_tws";
+this addWeapon "launch_I_Titan_short_F";
+this addWeapon "hgun_P07_F";
+this addWeapon "Rangefinder";
+
+comment "Add items";
+this linkItem "ItemMap";
+this linkItem "ItemCompass";
+this linkItem "ItemWatch";
+this linkItem "ItemRadio";
+this linkItem "NVGoggles";
+
+comment "Set identity";
+this setFace "WhiteHead_18";
+this setSpeaker "Male07ENG";
