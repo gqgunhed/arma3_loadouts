@@ -1,0 +1,55 @@
+comment "Exported from Arsenal by gunhed";
+comment "REQUIRES Arma3 Marksmen DLC";
+
+comment "Remove existing items";
+removeAllWeapons this;
+removeAllItems this;
+removeAllAssignedItems this;
+removeUniform this;
+removeVest this;
+removeBackpack this;
+removeHeadgear this;
+removeGoggles this;
+
+comment "Add containers";
+this forceAddUniform "U_B_CombatUniform_mcam_vest";
+this addItemToUniform "FirstAidKit";
+this addItemToUniform "SmokeShellBlue";
+this addItemToUniform "HandGrenade";
+this addItemToUniform "11Rnd_45ACP_Mag";
+this addVest "V_PlateCarrierIA1_dgtl";
+for "_i" from 1 to 2 do {this addItemToVest "FirstAidKit";};
+this addItemToVest "Chemlight_green";
+this addItemToVest "11Rnd_45ACP_Mag";
+this addItemToVest "SmokeShellBlue";
+for "_i" from 1 to 2 do {this addItemToVest "HandGrenade";};
+this addItemToVest "130Rnd_338_Mag";
+this addBackpack "B_Carryall_mcamo";
+for "_i" from 1 to 2 do {this addItemToBackpack "FirstAidKit";};
+this addItemToBackpack "Titan_AT";
+for "_i" from 1 to 2 do {this addItemToBackpack "130Rnd_338_Mag";};
+this addHeadgear "H_HelmetSpecB_paint1";
+this addGoggles "G_Tactical_Clear";
+
+comment "Add weapons";
+this addWeapon "MMG_02_camo_F";
+this addPrimaryWeaponItem "muzzle_snds_338_green";
+this addPrimaryWeaponItem "optic_Nightstalker";
+this addPrimaryWeaponItem "bipod_01_F_mtp";
+this addWeapon "launch_I_Titan_short_F";
+this addWeapon "hgun_Pistol_heavy_01_F";
+this addHandgunItem "muzzle_snds_acp";
+this addHandgunItem "optic_MRD";
+this addWeapon "Binocular";
+
+comment "Add items";
+this linkItem "ItemMap";
+this linkItem "ItemCompass";
+this linkItem "ItemWatch";
+this linkItem "ItemRadio";
+this linkItem "ItemGPS";
+this linkItem "NVGoggles";
+
+comment "Set identity";
+this setFace "GreekHead_A3_01";
+this setSpeaker "Male10ENG";
