@@ -1,0 +1,51 @@
+comment "Exported from Arsenal by gunhed";
+
+comment "Remove existing items";
+removeAllWeapons this;
+removeAllItems this;
+removeAllAssignedItems this;
+removeUniform this;
+removeVest this;
+removeBackpack this;
+removeHeadgear this;
+removeGoggles this;
+
+comment "Add containers";
+this forceAddUniform "U_BG_Guerrilla_6_1";
+for "_i" from 1 to 2 do {this addItemToUniform "FirstAidKit";};
+this addItemToUniform "SmokeShellBlue";
+this addItemToUniform "11Rnd_45ACP_Mag";
+this addVest "V_Chestrig_blk";
+for "_i" from 1 to 2 do {this addItemToVest "FirstAidKit";};
+this addItemToVest "Chemlight_green";
+this addItemToVest "SmokeShellBlue";
+for "_i" from 1 to 2 do {this addItemToVest "HandGrenade";};
+for "_i" from 1 to 4 do {this addItemToVest "10Rnd_93x64_DMR_05_Mag";};
+for "_i" from 1 to 2 do {this addItemToVest "11Rnd_45ACP_Mag";};
+this addBackpack "B_AssaultPack_dgtl";
+for "_i" from 1 to 2 do {this addItemToBackpack "RPG32_F";};
+this addHeadgear "H_Cap_blk_Raven";
+this addGoggles "G_Bandanna_tan";
+
+comment "Add weapons";
+this addWeapon "srifle_DMR_05_tan_f";
+this addPrimaryWeaponItem "muzzle_snds_93mmg_tan";
+this addPrimaryWeaponItem "optic_AMS";
+this addPrimaryWeaponItem "bipod_01_F_blk";
+this addWeapon "launch_RPG32_F";
+this addWeapon "hgun_Pistol_heavy_01_F";
+this addHandgunItem "muzzle_snds_acp";
+this addHandgunItem "optic_MRD";
+this addWeapon "Rangefinder";
+
+comment "Add items";
+this linkItem "ItemMap";
+this linkItem "ItemCompass";
+this linkItem "ItemWatch";
+this linkItem "ItemRadio";
+this linkItem "ItemGPS";
+this linkItem "NVGoggles_INDEP";
+
+comment "Set identity";
+this setFace "WhiteHead_21";
+this setSpeaker "Male05ENGB";
