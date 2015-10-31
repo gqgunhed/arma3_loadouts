@@ -1,0 +1,41 @@
+comment "Exported from Arsenal by Jens";
+
+comment "Remove existing items";
+removeAllWeapons this;
+removeAllItems this;
+removeAllAssignedItems this;
+removeUniform this;
+removeVest this;
+removeBackpack this;
+removeHeadgear this;
+removeGoggles this;
+
+comment "Add containers";
+this forceAddUniform "U_B_GhillieSuit";
+this addVest "V_PlateCarrierGL_mtp";
+for "_i" from 1 to 3 do {this addItemToVest "HandGrenade";};
+for "_i" from 1 to 5 do {this addItemToVest "7Rnd_408_Mag";};
+this addItemToVest "9Rnd_45ACP_Mag";
+this addBackpack "B_Kitbag_cbr";
+for "_i" from 1 to 15 do {this addItemToBackpack "7Rnd_408_Mag";};
+for "_i" from 1 to 5 do {this addItemToBackpack "9Rnd_45ACP_Mag";};
+this addHeadgear "H_HelmetB_light_desert";
+this addGoggles "G_Balaclava_oli";
+
+comment "Add weapons";
+this addWeapon "srifle_LRR_camo_F";
+this addPrimaryWeaponItem "optic_KHS_hex";
+this addWeapon "hgun_ACPC2_F";
+this addHandgunItem "muzzle_snds_acp";
+this addWeapon "Rangefinder";
+
+comment "Add items";
+this linkItem "ItemMap";
+this linkItem "ItemCompass";
+this linkItem "ItemWatch";
+this linkItem "ItemRadio";
+this linkItem "ItemGPS";
+
+comment "Set identity";
+this setFace "GreekHead_A3_01";
+this setSpeaker "Male09ENG";
