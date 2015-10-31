@@ -1,0 +1,46 @@
+comment "Exported from Arsenal by gunhed";
+
+comment "Remove existing items";
+removeAllWeapons this;
+removeAllItems this;
+removeAllAssignedItems this;
+removeUniform this;
+removeVest this;
+removeBackpack this;
+removeHeadgear this;
+removeGoggles this;
+
+comment "Add containers";
+this forceAddUniform "U_O_PilotCoveralls";
+for "_i" from 1 to 2 do {this addItemToUniform "FirstAidKit";};
+this addItemToUniform "30Rnd_65x39_caseless_mag";
+for "_i" from 1 to 2 do {this addItemToUniform "11Rnd_45ACP_Mag";};
+this addItemToUniform "Chemlight_blue";
+this addVest "V_HarnessO_brn";
+for "_i" from 1 to 2 do {this addItemToVest "FirstAidKit";};
+for "_i" from 1 to 4 do {this addItemToVest "30Rnd_65x39_caseless_mag_Tracer";};
+for "_i" from 1 to 2 do {this addItemToVest "MiniGrenade";};
+this addItemToVest "SmokeShellGreen";
+this addBackpack "B_AssaultPack_cbr";
+for "_i" from 1 to 2 do {this addItemToBackpack "30Rnd_65x39_caseless_mag_Tracer";};
+this addHeadgear "H_PilotHelmetHeli_B";
+
+comment "Add weapons";
+this addWeapon "arifle_MXC_Black_F";
+this addPrimaryWeaponItem "optic_Hamr";
+this addWeapon "hgun_Pistol_heavy_01_F";
+this addHandgunItem "muzzle_snds_acp";
+this addHandgunItem "optic_MRD";
+this addWeapon "Rangefinder";
+
+comment "Add items";
+this linkItem "ItemMap";
+this linkItem "ItemCompass";
+this linkItem "ItemWatch";
+this linkItem "ItemRadio";
+this linkItem "ItemGPS";
+this linkItem "NVGoggles_INDEP";
+
+comment "Set identity";
+this setFace "WhiteHead_06";
+this setSpeaker "Male09ENG";
