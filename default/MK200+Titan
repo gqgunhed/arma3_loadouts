@@ -1,0 +1,49 @@
+comment "Exported from Arsenal by gunhed";
+
+comment "Remove existing items";
+removeAllWeapons this;
+removeAllItems this;
+removeAllAssignedItems this;
+removeUniform this;
+removeVest this;
+removeBackpack this;
+removeHeadgear this;
+removeGoggles this;
+
+comment "Add containers";
+this forceAddUniform "U_B_CombatUniform_mcam";
+for "_i" from 1 to 2 do {this addItemToUniform "FirstAidKit";};
+for "_i" from 1 to 2 do {this addItemToUniform "11Rnd_45ACP_Mag";};
+this addItemToUniform "Chemlight_blue";
+this addVest "V_PlateCarrier2_rgr";
+for "_i" from 1 to 2 do {this addItemToVest "200Rnd_65x39_cased_Box";};
+for "_i" from 1 to 2 do {this addItemToVest "MiniGrenade";};
+this addItemToVest "SmokeShellBlue";
+this addBackpack "B_TacticalPack_mcamo";
+for "_i" from 1 to 3 do {this addItemToBackpack "200Rnd_65x39_cased_Box_Tracer";};
+this addItemToBackpack "Titan_AT";
+this addHeadgear "H_HelmetSpecB_snakeskin";
+this addGoggles "G_Tactical_Clear";
+
+comment "Add weapons";
+this addWeapon "LMG_Mk200_F";
+this addPrimaryWeaponItem "muzzle_snds_H_MG";
+this addPrimaryWeaponItem "optic_tws_mg";
+this addPrimaryWeaponItem "bipod_01_F_snd";
+this addWeapon "launch_B_Titan_short_F";
+this addWeapon "hgun_Pistol_heavy_01_F";
+this addHandgunItem "muzzle_snds_acp";
+this addHandgunItem "optic_MRD";
+this addWeapon "Rangefinder";
+
+comment "Add items";
+this linkItem "ItemMap";
+this linkItem "ItemCompass";
+this linkItem "ItemWatch";
+this linkItem "ItemRadio";
+this linkItem "ItemGPS";
+this linkItem "NVGoggles";
+
+comment "Set identity";
+this setFace "WhiteHead_06";
+this setSpeaker "Male08ENG";
