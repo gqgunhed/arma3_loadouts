@@ -1,0 +1,50 @@
+comment "Exported from Arsenal by gunhed";
+
+comment "Remove existing items";
+removeAllWeapons this;
+removeAllItems this;
+removeAllAssignedItems this;
+removeUniform this;
+removeVest this;
+removeBackpack this;
+removeHeadgear this;
+removeGoggles this;
+
+comment "Add containers";
+this forceAddUniform "U_B_Wetsuit";
+for "_i" from 1 to 2 do {this addItemToUniform "FirstAidKit";};
+this addItemToUniform "Chemlight_blue";
+for "_i" from 1 to 3 do {this addItemToUniform "30Rnd_65x39_caseless_mag";};
+this addItemToUniform "SmokeShellOrange";
+for "_i" from 1 to 3 do {this addItemToUniform "11Rnd_45ACP_Mag";};
+this addVest "V_RebreatherB";
+this addBackpack "B_TacticalPack_blk";
+for "_i" from 1 to 2 do {this addItemToBackpack "FirstAidKit";};
+for "_i" from 1 to 3 do {this addItemToBackpack "30Rnd_65x39_caseless_mag";};
+this addItemToBackpack "3Rnd_UGL_FlareCIR_F";
+for "_i" from 1 to 3 do {this addItemToBackpack "3Rnd_HE_Grenade_shell";};
+for "_i" from 1 to 2 do {this addItemToBackpack "DemoCharge_Remote_Mag";};
+this addHeadgear "H_HelmetSpecB_paint1";
+this addGoggles "G_B_Diving";
+
+comment "Add weapons";
+this addWeapon "arifle_MX_GL_Black_F";
+this addPrimaryWeaponItem "muzzle_snds_H";
+this addPrimaryWeaponItem "acc_pointer_IR";
+this addPrimaryWeaponItem "optic_Nightstalker";
+this addWeapon "hgun_Pistol_heavy_01_F";
+this addHandgunItem "muzzle_snds_acp";
+this addHandgunItem "optic_MRD";
+this addWeapon "Rangefinder";
+
+comment "Add items";
+this linkItem "ItemMap";
+this linkItem "ItemCompass";
+this linkItem "ItemWatch";
+this linkItem "ItemRadio";
+this linkItem "ItemGPS";
+this linkItem "NVGoggles_OPFOR";
+
+comment "Set identity";
+this setFace "WhiteHead_06";
+this setSpeaker "Male08ENG";
