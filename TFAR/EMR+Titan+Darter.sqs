@@ -1,0 +1,44 @@
+comment "Exported from Arsenal by [GQ]Gen.GUNHED";
+
+comment "Remove existing items";
+removeAllWeapons this;
+removeAllItems this;
+removeAllAssignedItems this;
+removeUniform this;
+removeVest this;
+removeBackpack this;
+removeHeadgear this;
+removeGoggles this;
+
+comment "Add containers";
+this forceAddUniform "U_B_CombatUniform_mcam";
+for "_i" from 1 to 2 do {this addItemToUniform "FirstAidKit";};
+this addItemToUniform "muzzle_snds_338_sand";
+this addItemToUniform "Chemlight_blue";
+this addVest "V_PlateCarrierSpec_blk";
+this addItemToVest "FirstAidKit";
+for "_i" from 1 to 6 do {this addItemToVest "20Rnd_762x51_Mag";};
+this addBackpack "B_UAV_01_backpack_F";
+this addHeadgear "H_HelmetSpecB_paint1";
+
+comment "Add weapons";
+this addWeapon "srifle_DMR_03_F";
+this addPrimaryWeaponItem "acc_pointer_IR";
+this addPrimaryWeaponItem "optic_AMS";
+this addPrimaryWeaponItem "bipod_01_F_blk";
+this addWeapon "launch_I_Titan_short_F";
+this addWeapon "hgun_Pistol_heavy_01_F";
+this addHandgunItem "optic_MRD";
+this addWeapon "Rangefinder";
+
+comment "Add items";
+this linkItem "ItemMap";
+this linkItem "ItemCompass";
+this linkItem "tf_microdagr";
+this linkItem "tf_anprc152_38";
+this linkItem "B_UavTerminal";
+this linkItem "NVGoggles";
+
+comment "Set identity";
+this setFace "WhiteHead_06";
+this setSpeaker "Male08ENG";

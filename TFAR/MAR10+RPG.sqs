@@ -1,0 +1,50 @@
+comment "Exported from Arsenal by [GQ]Gen.GUNHED";
+
+comment "Remove existing items";
+removeAllWeapons this;
+removeAllItems this;
+removeAllAssignedItems this;
+removeUniform this;
+removeVest this;
+removeBackpack this;
+removeHeadgear this;
+removeGoggles this;
+
+comment "Add containers";
+this forceAddUniform "U_B_CombatUniform_mcam";
+for "_i" from 1 to 2 do {this addItemToUniform "FirstAidKit";};
+this addItemToUniform "Chemlight_blue";
+this addItemToUniform "SmokeShellBlue";
+this addVest "V_PlateCarrier2_rgr";
+for "_i" from 1 to 2 do {this addItemToVest "FirstAidKit";};
+this addItemToVest "SmokeShellPurple";
+for "_i" from 1 to 5 do {this addItemToVest "10Rnd_338_Mag";};
+for "_i" from 1 to 2 do {this addItemToVest "MiniGrenade";};
+this addBackpack "B_TacticalPack_mcamo";
+for "_i" from 1 to 2 do {this addItemToBackpack "RPG32_F";};
+for "_i" from 1 to 3 do {this addItemToBackpack "10Rnd_338_Mag";};
+this addHeadgear "H_HelmetSpecB_paint1";
+this addGoggles "G_Tactical_Clear";
+
+comment "Add weapons";
+this addWeapon "srifle_DMR_02_camo_F";
+this addPrimaryWeaponItem "muzzle_snds_338_black";
+this addPrimaryWeaponItem "optic_AMS";
+this addPrimaryWeaponItem "bipod_01_F_blk";
+this addWeapon "launch_RPG32_F";
+this addWeapon "hgun_Pistol_heavy_01_F";
+this addHandgunItem "muzzle_snds_acp";
+this addHandgunItem "optic_MRD";
+this addWeapon "Rangefinder";
+
+comment "Add items";
+this linkItem "ItemMap";
+this linkItem "ItemCompass";
+this linkItem "ItemWatch";
+this linkItem "tf_anprc152_4";
+this linkItem "ItemGPS";
+this linkItem "NVGoggles";
+
+comment "Set identity";
+this setFace "WhiteHead_06";
+this setSpeaker "Male08ENG";

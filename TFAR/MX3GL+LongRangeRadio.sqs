@@ -1,0 +1,54 @@
+comment "Exported from Arsenal by [GQ]Gen.GUNHED";
+
+comment "Remove existing items";
+removeAllWeapons this;
+removeAllItems this;
+removeAllAssignedItems this;
+removeUniform this;
+removeVest this;
+removeBackpack this;
+removeHeadgear this;
+removeGoggles this;
+
+comment "Add containers";
+this forceAddUniform "U_O_PilotCoveralls";
+for "_i" from 1 to 2 do {this addItemToUniform "FirstAidKit";};
+this addItemToUniform "Chemlight_blue";
+this addItemToUniform "SmokeShellPurple";
+for "_i" from 1 to 2 do {this addItemToUniform "MiniGrenade";};
+this addItemToUniform "30Rnd_65x39_caseless_mag_Tracer";
+this addVest "V_PlateCarrier2_blk";
+for "_i" from 1 to 2 do {this addItemToVest "FirstAidKit";};
+this addItemToVest "SmokeShellBlue";
+for "_i" from 1 to 3 do {this addItemToVest "30Rnd_65x39_caseless_mag_Tracer";};
+this addItemToVest "3Rnd_SmokeOrange_Grenade_shell";
+this addItemToVest "3Rnd_UGL_FlareCIR_F";
+for "_i" from 1 to 4 do {this addItemToVest "3Rnd_HE_Grenade_shell";};
+this addBackpack "tf_anprc155";
+for "_i" from 1 to 2 do {this addItemToBackpack "FirstAidKit";};
+for "_i" from 1 to 2 do {this addItemToBackpack "HandGrenade";};
+for "_i" from 1 to 3 do {this addItemToBackpack "30Rnd_65x39_caseless_mag_Tracer";};
+for "_i" from 1 to 4 do {this addItemToBackpack "3Rnd_HE_Grenade_shell";};
+this addHeadgear "H_HelmetSpecB_blk";
+this addGoggles "G_Bandanna_shades";
+
+comment "Add weapons";
+this addWeapon "arifle_MX_GL_Black_F";
+this addPrimaryWeaponItem "optic_Hamr";
+this addWeapon "hgun_Pistol_heavy_01_F";
+this addHandgunItem "muzzle_snds_acp";
+this addHandgunItem "optic_MRD";
+this addWeapon "Rangefinder";
+
+comment "Add items";
+this linkItem "ItemMap";
+this linkItem "ItemCompass";
+this linkItem "ItemWatch";
+this linkItem "tf_anprc152_6";
+this linkItem "ItemGPS";
+this linkItem "NVGoggles";
+
+comment "Set identity";
+this setFace "WhiteHead_04";
+this setSpeaker "Male03ENGB";
+[this,"Curator"] call bis_fnc_setUnitInsignia;
