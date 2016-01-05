@@ -12,27 +12,22 @@ removeGoggles this;
 
 comment "Add containers";
 this forceAddUniform "U_B_CombatUniform_mcam";
-for "_i" from 1 to 3 do {this addItemToUniform "FirstAidKit";};
-this addItemToUniform "muzzle_snds_338_sand";
+for "_i" from 1 to 2 do {this addItemToUniform "FirstAidKit";};
 this addItemToUniform "SmokeShellPurple";
 this addItemToUniform "Chemlight_blue";
-this addVest "V_PlateCarrierSpec_blk";
+this addItemToUniform "11Rnd_45ACP_Mag";
+this addVest "V_PlateCarrier2_rgr";
 this addItemToVest "FirstAidKit";
-for "_i" from 1 to 7 do {this addItemToVest "20Rnd_762x51_Mag";};
-this addBackpack "B_Carryall_mcamo";
-for "_i" from 1 to 4 do {this addItemToBackpack "20Rnd_762x51_Mag";};
-for "_i" from 1 to 2 do {this addItemToBackpack "HandGrenade";};
-this addItemToBackpack "Titan_AT";
+this addItemToVest "HandGrenade";
+this addBackpack "B_TacticalPack_mcamo";
+for "_i" from 1 to 2 do {this addItemToBackpack "130Rnd_338_Mag";};
 this addHeadgear "H_HelmetSpecB_paint1";
 
 comment "Add weapons";
-this addWeapon "srifle_DMR_03_F";
-this addPrimaryWeaponItem "acc_pointer_IR";
-this addPrimaryWeaponItem "optic_AMS";
-this addPrimaryWeaponItem "bipod_01_F_blk";
-this addWeapon "launch_B_Titan_short_F";
+this addWeapon "MMG_02_camo_F";
+this addPrimaryWeaponItem "optic_Hamr";
+this addPrimaryWeaponItem "bipod_01_F_mtp";
 this addWeapon "hgun_Pistol_heavy_01_F";
-this addHandgunItem "optic_MRD";
 this addWeapon "Rangefinder";
 
 comment "Add items";

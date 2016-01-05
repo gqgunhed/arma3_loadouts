@@ -1,0 +1,47 @@
+comment "Exported from Arsenal by [GQ]Gen.GUNHED";
+
+comment "Remove existing items";
+removeAllWeapons this;
+removeAllItems this;
+removeAllAssignedItems this;
+removeUniform this;
+removeVest this;
+removeBackpack this;
+removeHeadgear this;
+removeGoggles this;
+
+comment "Add containers";
+this forceAddUniform "U_B_CombatUniform_mcam_vest";
+for "_i" from 1 to 2 do {this addItemToUniform "FirstAidKit";};
+this addItemToUniform "SmokeShellOrange";
+this addItemToUniform "Chemlight_green";
+this addVest "V_PlateCarrier2_rgr";
+for "_i" from 1 to 2 do {this addItemToVest "FirstAidKit";};
+this addItemToVest "MineDetector";
+this addItemToVest "150Rnd_762x51_Box";
+for "_i" from 1 to 2 do {this addItemToVest "HandGrenade";};
+this addBackpack "B_TacticalPack_mcamo";
+for "_i" from 1 to 2 do {this addItemToBackpack "150Rnd_762x51_Box_Tracer";};
+for "_i" from 1 to 2 do {this addItemToBackpack "HandGrenade";};
+for "_i" from 1 to 2 do {this addItemToBackpack "150Rnd_762x54_Box_Tracer";};
+this addHeadgear "H_HelmetB_plain_blk";
+this addGoggles "G_Bandanna_tan";
+
+comment "Add weapons";
+this addWeapon "LMG_Zafir_F";
+this addPrimaryWeaponItem "acc_pointer_IR";
+this addPrimaryWeaponItem "optic_Nightstalker";
+this addWeapon "hgun_P07_F";
+this addWeapon "Rangefinder";
+
+comment "Add items";
+this linkItem "ItemMap";
+this linkItem "ItemCompass";
+this linkItem "ItemWatch";
+this linkItem "tf_anprc148jem_6";
+this linkItem "ItemGPS";
+this linkItem "NVGoggles";
+
+comment "Set identity";
+this setFace "GreekHead_A3_01";
+this setSpeaker "Male10ENG";
