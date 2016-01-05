@@ -1,0 +1,44 @@
+comment "Exported from Arsenal by [GQ]Gen.GUNHED";
+
+comment "Remove existing items";
+removeAllWeapons this;
+removeAllItems this;
+removeAllAssignedItems this;
+removeUniform this;
+removeVest this;
+removeBackpack this;
+removeHeadgear this;
+removeGoggles this;
+
+comment "Add containers";
+this forceAddUniform "U_B_CombatUniform_mcam_vest";
+for "_i" from 1 to 2 do {this addItemToUniform "FirstAidKit";};
+this addItemToUniform "SmokeShellBlue";
+this addItemToUniform "Chemlight_red";
+for "_i" from 1 to 2 do {this addItemToUniform "16Rnd_9x21_Mag";};
+this addVest "V_PlateCarrierSpec_mtp";
+for "_i" from 1 to 2 do {this addItemToVest "FirstAidKit";};
+for "_i" from 1 to 2 do {this addItemToVest "HandGrenade";};
+this addBackpack "B_TacticalPack_mcamo";
+for "_i" from 1 to 3 do {this addItemToBackpack "200Rnd_65x39_cased_Box_Tracer";};
+this addHeadgear "H_HelmetSpecB_paint2";
+this addGoggles "G_Combat";
+
+comment "Add weapons";
+this addWeapon "LMG_Mk200_F";
+this addPrimaryWeaponItem "acc_pointer_IR";
+this addPrimaryWeaponItem "optic_Hamr";
+this addWeapon "hgun_P07_F";
+this addWeapon "Rangefinder";
+
+comment "Add items";
+this linkItem "ItemMap";
+this linkItem "ItemCompass";
+this linkItem "ItemWatch";
+this linkItem "tf_anprc148jem_6";
+this linkItem "ItemGPS";
+this linkItem "NVGoggles";
+
+comment "Set identity";
+this setFace "GreekHead_A3_01";
+this setSpeaker "Male10ENG";
