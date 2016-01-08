@@ -1,0 +1,50 @@
+comment "Exported from Arsenal by [GQ]Gen.GUNHED";
+
+comment "Remove existing items";
+removeAllWeapons this;
+removeAllItems this;
+removeAllAssignedItems this;
+removeUniform this;
+removeVest this;
+removeBackpack this;
+removeHeadgear this;
+removeGoggles this;
+
+comment "Add containers";
+this forceAddUniform "rhs_uniform_cu_ocp_101st";
+for "_i" from 1 to 2 do {this addItemToUniform "FirstAidKit";};
+this addItemToUniform "Chemlight_blue";
+this addItemToUniform "SmokeShellBlue";
+for "_i" from 1 to 2 do {this addItemToUniform "11Rnd_45ACP_Mag";};
+this addVest "rhsusf_iotv_ocp_Rifleman";
+for "_i" from 1 to 2 do {this addItemToVest "FirstAidKit";};
+for "_i" from 1 to 3 do {this addItemToVest "rhs_mag_m67";};
+for "_i" from 1 to 7 do {this addItemToVest "rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red";};
+for "_i" from 1 to 2 do {this addItemToVest "11Rnd_45ACP_Mag";};
+this addBackpack "rhsusf_assault_eagleaiii_ocp";
+this addItemToBackpack "Titan_AT";
+for "_i" from 1 to 2 do {this addItemToBackpack "rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red";};
+this addHeadgear "rhsusf_mich_bare_norotos_semi_headset";
+this addGoggles "rhs_googles_clear";
+
+comment "Add weapons";
+this addWeapon "rhs_weap_m27iar";
+this addPrimaryWeaponItem "rhsusf_acc_anpeq15_light";
+this addPrimaryWeaponItem "optic_AMS";
+this addPrimaryWeaponItem "bipod_01_F_blk";
+this addWeapon "launch_B_Titan_short_F";
+this addWeapon "hgun_Pistol_heavy_01_F";
+this addHandgunItem "muzzle_snds_acp";
+this addHandgunItem "optic_MRD";
+this addWeapon "lerca_1200_tan";
+
+comment "Add items";
+this linkItem "ItemMap";
+this linkItem "ItemCompass";
+this linkItem "ItemWatch";
+this linkItem "tf_anprc152_2";
+this linkItem "ItemGPS";
+
+comment "Set identity";
+this setFace "WhiteHead_10";
+this setSpeaker "Male09ENG";
