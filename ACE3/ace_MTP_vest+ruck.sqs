@@ -1,0 +1,50 @@
+﻿comment "Exported from Arsenal by [GQ]Gen.GUNHED";
+
+comment "Remove existing items";
+removeAllWeapons this;
+removeAllItems this;
+removeAllAssignedItems this;
+removeUniform this;
+removeVest this;
+removeBackpack this;
+removeHeadgear this;
+removeGoggles this;
+
+comment "Add containers";
+this forceAddUniform "U_B_CombatUniform_mcam";
+for "_i" from 1 to 4 do {this addItemToUniform "ACE_fieldDressing";};
+for "_i" from 1 to 4 do {this addItemToUniform "ACE_elasticBandage";};
+this addItemToUniform "ACE_EarPlugs";
+this addItemToUniform "ACE_Flashlight_MX991";
+this addItemToUniform "ACE_IR_Strobe_Item";
+this addItemToUniform "ACE_MapTools";
+this addItemToUniform "ACE_microDAGR";
+for "_i" from 1 to 2 do {this addItemToUniform "ACE_morphine";};
+this addItemToUniform "ACE_RangeCard";
+this addItemToUniform "ACE_tourniquet";
+for "_i" from 1 to 2 do {this addItemToUniform "ACE_packingBandage";};
+for "_i" from 1 to 2 do {this addItemToUniform "16Rnd_9x21_Mag";};
+this addItemToUniform "Chemlight_blue";
+this addItemToUniform "SmokeShellBlue";
+this addVest "V_PlateCarrier1_rgr";
+this addBackpack "B_TacticalPack_mcamo";
+this addHeadgear "H_HelmetSpecB_sand";
+this addGoggles "G_Tactical_Clear";
+
+comment "Add weapons";
+this addWeapon "hgun_P07_F";
+this addHandgunItem "muzzle_snds_L";
+this addWeapon "ACE_VectorDay";
+
+comment "Add items";
+this linkItem "ItemMap";
+this linkItem "ItemCompass";
+this linkItem "ItemWatch";
+this linkItem "ItemRadio";
+this linkItem "ItemGPS";
+this linkItem "NVGoggles";
+
+comment "Set identity";
+this setFace "WhiteHead_10";
+this setSpeaker "male05eng";
+[this,"ACE_insignia_logo"] call bis_fnc_setUnitInsignia;
